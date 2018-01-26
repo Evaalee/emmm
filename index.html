@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><title>Ô¶·½Ô¶·½</title></head>
+<head><title>è¿œæ–¹è¿œæ–¹</title></head>
 <link href="css/index_style.css" rel="stylesheet" type="text/css">
 <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
 
@@ -25,14 +25,14 @@
 
 <!-----HEADER END----->
 
-<!--ÓÃÀ´½â¾öÊÓÆµÓÒ¼ü²Ëµ¥£¬ÓÃÓÚÊÓÆµÉÏÃæµÄÕÚÕÖ²ã START-->
+<!--ç”¨æ¥è§£å†³è§†é¢‘å³é”®èœå•ï¼Œç”¨äºè§†é¢‘ä¸Šé¢çš„é®ç½©å±‚ START-->
 <div class="videozz"></div>
-<!--ÓÃÀ´½â¾öÊÓÆµÓÒ¼ü²Ëµ¥£¬ÓÃÓÚÊÓÆµÉÏÃæµÄÕÚÕÖ²ã END-->
+<!--ç”¨æ¥è§£å†³è§†é¢‘å³é”®èœå•ï¼Œç”¨äºè§†é¢‘ä¸Šé¢çš„é®ç½©å±‚ END-->
 
 
 
 <script>
-//ÓîÖæÌØĞ§
+//å®‡å®™ç‰¹æ•ˆ
 "use strict";
 var canvas = document.getElementById('canvas'),
   ctx = canvas.getContext('2d'),
@@ -42,7 +42,7 @@ var canvas = document.getElementById('canvas'),
   hue = 217,
   stars = [],
   count = 0,
-  maxStars = 1300;//ĞÇĞÇÊıÁ¿
+  maxStars = 1300;//æ˜Ÿæ˜Ÿæ•°é‡
 
 var canvas2 = document.createElement('canvas'),
   ctx2 = canvas2.getContext('2d');
@@ -81,19 +81,19 @@ function maxOrbit(x, y) {
   var max = Math.max(x, y),
     diameter = Math.round(Math.sqrt(max * max + max * max));
   return diameter / 2;
-  //ĞÇĞÇÒÆ¶¯·¶Î§£¬ÖµÔ½´ó·¶Î§Ô½Ğ¡£¬
+  //æ˜Ÿæ˜Ÿç§»åŠ¨èŒƒå›´ï¼Œå€¼è¶Šå¤§èŒƒå›´è¶Šå°ï¼Œ
 }
 
 var Star = function() {
 
   this.orbitRadius = random(maxOrbit(w, h));
   this.radius = random(60, this.orbitRadius) / 8; 
-  //ĞÇĞÇ´óĞ¡
+  //æ˜Ÿæ˜Ÿå¤§å°
   this.orbitX = w / 2;
   this.orbitY = h / 2;
   this.timePassed = random(0, maxStars);
   this.speed = random(this.orbitRadius) / 50000; 
-  //ĞÇĞÇÒÆ¶¯ËÙ¶È
+  //æ˜Ÿæ˜Ÿç§»åŠ¨é€Ÿåº¦
   this.alpha = random(2, 10) / 10;
 
   count++;
@@ -122,7 +122,7 @@ for (var i = 0; i < maxStars; i++) {
 
 function animation() {
   ctx.globalCompositeOperation = 'source-over';
-  ctx.globalAlpha = 0.5; //Î²°Í
+  ctx.globalAlpha = 0.5; //å°¾å·´
   ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 2)';
   ctx.fillRect(0, 0, w, h)
 
